@@ -1,14 +1,4 @@
-## Data description
-
-Description of each data file
-
- - Dataset
- - File name
- - Details
- - Column names
- - Definition
-
-#### Devfest2018
+## Devfest2018
 
 ###### Description
 Dataset contains details of all individuals that registered for Devfest on the Gravitas registration protal
