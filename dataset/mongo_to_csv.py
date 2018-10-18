@@ -11,7 +11,6 @@ col_names = [
     'campaign_id',
     'source',
     'ip',
-    'as',
     'city',
     'country',
     'countryCode',
@@ -55,9 +54,10 @@ def get_data(dblink, database_name, collection_name, file_name):
             row = parse_dict(doc)
             if len(row) == 18:
                 database.append(row)
-            
+
         df = pd.DataFrame(database, columns=col_names)
         print(df.head())
+        print('Shape: ', df.shape)
         df.to_csv(file_name, index=False)
         return 'Data parsed to csv file'
     
@@ -65,6 +65,6 @@ def get_data(dblink, database_name, collection_name, file_name):
         return 'Connection cannot be estb.'
 
 if __name__ == "__main__":
-
+    
     data = get_data(*params.values(), file_name), 
     print(data)
